@@ -4,12 +4,11 @@ WIP (last update: 20240307)
 
 Reference: https://www.codewithantonio.com/projects/ecommerce
 
-Full-Stack Web Development:
 - Next.js 13
 - React
 - Tailwind
 - Prisma
-- MySQL
+- supabse (PostgreSQL)
 - shadcn-ui (UI)
 - clerk (auth)
 - stripe (payment)
