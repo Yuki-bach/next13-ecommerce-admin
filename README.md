@@ -1,8 +1,8 @@
-WIP (20240307)
+WIP (last update: 20240307)
 
 Reference: https://www.codewithantonio.com/projects/ecommerce
 
-Full-Stack Web Development Stack:
+Full-Stack Web Development:
 - Next.js 13
 - React
 - Tailwind
