@@ -1,5 +1,7 @@
 WIP (last update: 20240307)
 
+## *shakyo* coding (写経)
+
 Reference: https://www.codewithantonio.com/projects/ecommerce
 
 Full-Stack Web Development:
