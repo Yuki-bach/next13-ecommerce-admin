@@ -41,14 +41,15 @@ export async function PATCH(
 export async function DELETE(
   req: Request,
   { params }: { params: { storeId: string } }
-  // params works only as the second parameter. so we need req althought it's not used
+    // params works only as the second parameter. so we need req althought it's not used
 ) {
   try {
     const { userId } = auth();
 
     if (!userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Unauthenticated", { status: 403 });
     }
+
     if (!params.storeId) {
       return new NextResponse("Store id is required", { status: 400 });
     }
@@ -56,13 +57,13 @@ export async function DELETE(
     const store = await prismadb.store.deleteMany({
       where: {
         id: params.storeId,
-        userId,
-      },
+        userId
+      }
     });
 
     return NextResponse.json(store);
   } catch (error) {
-    console.log("[STORE_PATCH]", error);
+    console.log('[STORE_DELETE]', error);
     return new NextResponse("Internal error", { status: 500 });
   }
-}
+};
